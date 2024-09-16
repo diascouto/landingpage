@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
+
+/* Aplicação global de reset de margens e paddings, e definição da fonte padrão */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif; /* Fonte padrão da página */
+}
+
+header {
+    background-color: rgb(25, 5, 64); /* Cor de fundo do cabeçalho */
+    box-shadow: 0px 3px 10px #464646; /* Sombra abaixo do cabeçalho */
+}
+
+.nav-bar {
+    display: flex; /* Layout flexível para alinhar os itens da barra de navegação */
+    justify-content: space-between; /* Espaço distribuído entre os itens */
+    padding: 1.5rem 6rem; /* Espaçamento interno da barra de navegação */
+    flex-wrap: wrap; /* Permite que o conteúdo quebre em várias linhas se necessário */
+}
+
+.logo {
+    display: flex; /* Layout flexível para alinhar o logo */
+    align-items: center; /* Centraliza verticalmente o logo */
+}
+
+.logo h1 {
+    color: #fff; /* Cor branca para o texto do logo */
+}
+
+.nav-list {
+    display: flex; /* Layout flexível para a lista de navegação */
+    align-items: center; /* Alinha verticalmente os itens da lista de navegação */
+}
+
+.nav-list ul {
+    display: flex; /* Exibe os itens da lista em linha */
+    justify-content: center; /* Centraliza os itens da lista */
+    list-style: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o padding da lista */
+    margin: 0; /* Remove as margens da lista */
+}
+
+.nav-item {
+    margin: 0 15px; /* Espaçamento horizontal entre os itens da navegação */
+}
+
+.nav-link {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-size: 1.15rem; /* Define o tamanho da fonte dos links */
+    color: #fff; /* Cor branca para os links */
+    font-weight: 400; /* Peso da fonte */
+    transition: font-size 0.3s ease; /* Transição suave no tamanho da fonte ao passar o mouse */
+}
+
+.nav-link:hover {
+    font-size: 1.3rem; /* Aumenta o tamanho da fonte ao passar o mouse */
+}
+
+.propouse-button button {
+    border: none; /* Remove a borda padrão do botão */
+    padding: 10px 15px; /* Espaçamento interno do botão */
+    border-radius: 5px; /* Bordas arredondadas */
+    background-color: #0187a7; /* Cor de fundo do botão */
+    margin-top: 1.8rem; /* Margem superior */
+}
+
+.propouse-button button a {
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: #fff; /* Cor branca para o texto do link */
+    font-weight: 500; /* Peso da fonte */
+    font-size: 1.1rem; /* Tamanho da fonte do link */
+    transition: font-size 0.3s ease; /* Transição suave no tamanho da fonte ao passar o mouse */
+}
+
+.propouse-button button a:hover {
+    font-size: 1.25rem; /* Aumenta o tamanho da fonte ao passar o mouse */
+}
+
+/* Ícone do menu móvel, inicialmente oculto */
+.mobile-menu-icon {
+    display: none;
+}
+
+.mobile-menu {
+    display: none; /* Menu móvel inicialmente oculto */
+}
+
+.propouse-button-mobile {
+    display: none; /* Inicialmente oculto */
+    justify-content: center; /* Centraliza horizontalmente o botão */
+    align-items: center; /* Centraliza verticalmente o botão */
+    width: 100%; /* O botão ocupa toda a largura */
+    margin-top: 1.8rem; /* Margem superior */
+}
+
+.propouse-button-mobile button {
+    border: none; /* Remove a borda do botão */
+    padding: 10px 15px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    background-color: #0187a7; /* Cor de fundo do botão móvel */
+}
+
+.propouse-button-mobile button a {
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: #fff; /* Cor branca para o texto do link */
+    font-weight: 500; /* Peso da fonte */
+    font-size: 1.1rem; /* Tamanho da fonte */
+}
+
+/* Media Queries para Responsividade */
+
+/* Quando a largura da tela for de 1008px ou menos */
+@media (max-width: 1008px) {
+    .nav-list {
+        display: none; /* Oculta a lista de navegação */
+    }
+
+    .mobile-menu-icon {
+        display: block; /* Exibe o ícone do menu móvel */
+    }
+
+    .mobile-menu-icon button {
+        background-color: transparent; /* Remove a cor de fundo do botão */
+        border: none; /* Remove a borda do botão */
+        cursor: pointer; /* Muda o cursor para ponteiro */
+    }
+
+    .mobile-menu ul {
+        display: flex; /* Exibe os itens da lista em coluna */
+        flex-direction: column; /* Alinha os itens da lista verticalmente */
+        text-align: center; /* Centraliza o texto */
+        padding-bottom: 1rem; /* Adiciona espaçamento inferior */
+    }
+
+    .mobile-menu .nav-item {
+        display: block; /* Exibe os itens da lista */
+        padding-top: 1.2rem; /* Espaçamento superior entre os itens */
+    }
+
+    .mobile-menu .login-button {
+        display: block; /* Exibe o botão de login */
+        padding: 1rem 2rem; /* Espaçamento interno do botão de login */
+    }
+
+    .mobile-menu .login-button button {
+        width: 100%; /* O botão de login ocupa toda a largura */
+    }
+
+    .open {
+        display: block; /* Exibe o menu quando aberto */
+    }
+}
+
+/* Quando a largura da tela for de 768px ou menos */
+@media (max-width: 768px) {
+    .nav-bar {
+        padding: 1rem; /* Reduz o padding da barra de navegação */
+    }
+    
+    .mobile-menu-icon {
+        display: block; /* Garante que o ícone do menu móvel esteja visível */
+    }
+}
+
+/* Quando a largura da tela for de 445px ou menos */
+@media (max-width: 445px) {
+    .propouse-button-mobile {
+        display: flex; /* Exibe o botão de proposta móvel */
+    }
+    
+    .propouse-button {
+        display: none; /* Oculta o botão de proposta padrão */
+    }
+}

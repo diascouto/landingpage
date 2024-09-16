@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+* {
+    margin: 0; /* Remove margem padrão de todos os elementos */
+    padding: 0; /* Remove padding padrão de todos os elementos */
+    box-sizing: border-box; /* Define box-sizing para incluir padding e borda no tamanho total dos elementos */
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Define a fonte padrão como 'Poppins' */
+    background-color: #5A77FF; /* Cor de fundo do corpo da página */
+    display: flex; /* Define o layout do corpo como flexbox */
+    flex-direction: column; /* Organiza os itens em coluna */
+    min-height: 100vh; /* Define altura mínima como 100% da altura da viewport */
+    justify-content: space-between; /* Distribui espaço de forma uniforme entre os elementos */
+}
+
+.overlay {
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com opacidade para criar efeito de sobreposição */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para criar profundidade */
+    padding: 20px; /* Espaçamento interno da sobreposição */
+    width: 100%; /* Largura total da sobreposição */
+}
+
+.content-wrapper {
+    display: flex; /* Define o layout como flexbox */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: stretch; /* Faz com que os itens tenham a mesma altura */
+    padding: 20px; /* Padding interno do contêiner */
+    margin: 20px auto; /* Margem automática para centralizar o contêiner */
+    width: 90%; /* Define a largura do contêiner como 90% */
+    max-width: 1500px; /* Largura máxima do contêiner */
+    background-color: #ffffff; /* Cor de fundo do contêiner */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
+}
+
+.text-content {
+    flex: 1; /* O conteúdo de texto ocupa 50% da largura do contêiner */
+    margin: 5%; /* Margem ao redor do conteúdo de texto */
+    display: flex; /* Define o layout como flexbox */
+    flex-direction: column; /* Organiza os itens em coluna */
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+}
+
+.text-content h1 {
+    font-size: 2.5rem; /* Tamanho da fonte do título */
+    margin-bottom: 10vh; /* Margem inferior do título */
+}
+
+.text-content p {
+    font-size: 1.4rem; /* Tamanho da fonte do parágrafo */
+    line-height: 1.6; /* Altura da linha dos parágrafos */
+    margin-bottom: 10px; /* Margem inferior dos parágrafos */
+}
+
+.image-content {
+    flex: 1; /* O conteúdo de imagem ocupa 50% da largura do contêiner */
+    display: flex; /* Define o layout como flexbox */
+    flex-direction: column; /* Organiza os itens em coluna */
+    justify-content: center; /* Centraliza a imagem verticalmente */
+}
+
+.image-content img {
+    max-width: 100%; /* Largura máxima da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Bordas arredondadas para a imagem */
+}
+
+.map-wrapper {
+    width: 100%; /* Largura total do contêiner do mapa */
+    height: 300px; /* Altura fixa do mapa */
+    margin: 50px 0px; /* Margem superior e inferior de 50px */
+    display: flex; /* Define o layout como flexbox */
+    justify-content: center; /* Centraliza o mapa horizontalmente */
+}
+
+.map-wrapper iframe {
+    width: 90%; /* Largura do iframe como 90% do contêiner */
+    height: 100%; /* Altura total do iframe */
+    border: 0; /* Remove a borda do iframe */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column; /* Altera a direção do layout para coluna em telas menores */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .text-content {
+        margin-right: 0; /* Remove margem à direita */
+        margin-bottom: 20px; /* Adiciona margem inferior */
+    }
+}

@@ -1,0 +1,186 @@
+main {
+    height: 80vh; /* Define a altura do main */
+    display: inline; /* Define o display inline */
+    background-color: #190540; /* Cor de fundo do main */
+}
+
+#home {
+    background-color: #5A77FF; /* Cor de fundo da seção home */
+}
+
+.btn-default {
+    border: none; /* Remove a borda do botão */
+    display: flex; /* Define o botão como um flex container */
+    align-items: center; /* Alinha os itens no centro verticalmente */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    background-color: white; /* Cor de fundo do botão */
+    border-radius: 12px; /* Bordas arredondadas */
+    padding: 10px 14px; /* Padding interno do botão */
+    font-weight: 600; /* Peso da fonte */
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1); /* Sombra do botão */
+    cursor: pointer; /* Muda o cursor para pointer quando hover */
+    transition: background-color .3s ease; /* Transição suave na mudança de cor de fundo */
+}
+
+.btn-default:hover {
+    background-color: var(--color-primary-3); /* Cor de fundo ao passar o mouse */
+}
+
+.social-media-buttons {
+    display: flex; /* Exibe os botões de mídia social em linha */
+    gap: 18px; /* Espaçamento entre os botões */
+}
+
+.social-media-buttons a {
+    display: flex; /* Exibe os links como flex containers */
+    align-items: center; /* Alinha o conteúdo verticalmente */
+    justify-content: center; /* Centraliza o conteúdo */
+    width: 45px; /* Largura dos botões */
+    height: 40px; /* Altura dos botões */
+    background-color: white; /* Cor de fundo dos botões */
+    font-size: 1.25rem; /* Tamanho da fonte dos ícones */
+    border-radius: 10px; /* Bordas arredondadas */
+    text-decoration: none; /* Remove a sublinhado dos links */
+    color: var(--color-neutral-1); /* Cor dos ícones */
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1); /* Sombra dos botões */
+    transition: box-shadow .3s ease; /* Transição suave na sombra dos botões */
+}
+
+.social-media-buttons a:hover {
+    box-shadow: 0px 0px 12px 8px rgba(0, 0, 0, 0.1); /* Sombra ao passar o mouse */
+}
+
+#home {
+    display: flex; /* Define o layout flexível para a seção home */
+    min-height: calc(100vh - 148px); /* Define a altura mínima de 100vh menos o tamanho do header */
+    position: relative; /* Define a posição relativa */
+}
+
+section {
+    padding: 5rem 8%; /* Define o espaçamento interno da seção */
+}
+
+#cta {
+    width: 50%; /* Define a largura do CTA (call to action) */
+    display: flex; /* Layout flexível para o CTA */
+    flex-direction: column; /* Coloca os itens em coluna */
+    gap: 28px; /* Espaçamento entre os itens */
+    margin-top: 5%; /* Margem superior do CTA */
+}
+
+#cta .title {
+    font-size: 2rem; /* Tamanho da fonte do título */
+    color: white; /* Cor do texto do título */
+}
+
+#cta .title span {
+    color: yellow; /* Cor amarela para o texto destacado */
+}
+
+#cta .description {
+    font-size: 1.5rem; /* Tamanho da fonte da descrição */
+    color: white; /* Cor do texto da descrição */
+}
+
+#cta_buttons {
+    display: flex; /* Layout flexível para os botões do CTA */
+    gap: 24px; /* Espaçamento entre os botões */
+}
+
+#cta_buttons a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: black; /* Cor do texto dos links */
+}
+
+#phone_button {
+    display: flex; /* Layout flexível para o botão de telefone */
+    gap: 8px; /* Espaçamento entre os itens */
+    align-items: center; /* Alinha verticalmente os itens */
+    background-color: white; /* Cor de fundo do botão */
+    padding: 8px 14px; /* Padding interno do botão */
+    font-weight: 500; /* Peso da fonte */
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1); /* Sombra do botão */
+    border-radius: 12px; /* Bordas arredondadas */
+}
+
+#phone_button button {
+    background-color: rgb(140, 187, 241); /* Cor de fundo do botão dentro do botão de telefone */
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1); /* Sombra do botão */
+}
+
+#banner {
+    display: flex; /* Define o banner como flex container */
+    align-items: start; /* Alinha os itens ao topo */
+    justify-content: end; /* Alinha os itens à direita */
+    width: 50%; /* Largura do banner */
+}
+
+#banner img {
+    width: 100%; /* Define a largura da imagem como 100% do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do contêiner */
+}
+
+#img1 {
+    background-color: #5A77FF; /* Cor de fundo */
+    margin-bottom: -12vh; /* Margem inferior negativa */
+}
+
+#imgh2 {
+    display: flex; /* Layout flexível para o contêiner da imagem */
+    background-color: #5A77FF; /* Cor de fundo */
+    width: 100%; /* Largura total */
+    height: 1vh; /* Altura mínima */
+}
+
+#imgh2 img {
+    width: 100%; /* Largura total da imagem */
+}
+
+#imgh3 {
+    display: block; /* Exibe o contêiner em bloco */
+    background-color: #5A77FF; /* Cor de fundo */
+    height: auto; /* Ajusta a altura automaticamente */
+    width: auto; /* Ajusta a largura automaticamente */
+    margin-bottom: -21px; /* Margem inferior negativa */
+}
+
+#img4 {
+    margin-bottom: -7px; /* Margem inferior negativa */
+    height: 50%; /* Define a altura como 50% */
+    background-color: #5A77FF; /* Cor de fundo */
+}
+
+#explanation {
+    display: block; /* Exibe o contêiner em bloco */
+    background-color: #8CBBF1; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    font-size: 1.5rem; /* Tamanho da fonte */
+}
+
+.calc-title {
+    margin: 5%; /* Define a margem da classe calc-title */
+}
+
+@media screen and (max-width: 768px) {
+    #home {
+        min-height: 100%; /* Define a altura mínima como 100% */
+        padding-top: 0px; /* Remove o padding superior */
+    }
+
+    #banner, #home .shape {
+        display: none; /* Oculta o banner e a forma */
+    }
+
+    #cta {
+        width: 100%; /* Define a largura total para o CTA em telas menores */
+        align-items: center; /* Centraliza o conteúdo do CTA */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    #imgh2 img, #imgh3 img {
+        width: 100%; /* Largura total para as imagens */
+        height: auto; /* Mantém a proporção das imagens */
+    }
+}

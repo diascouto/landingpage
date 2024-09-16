@@ -1,0 +1,110 @@
+#menu {
+    display: flex; /* Layout flexível para organizar os elementos */
+    flex-direction: column; /* Organiza os itens em coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    min-height: 100vh; /* Altura mínima do menu para ocupar a tela inteira */
+    background-image: linear-gradient( /* Fundo com gradiente */
+        #190540 5%, /* Cor roxa escura ocupando 5% do gradiente */
+        #4A538C /* Cor azulada no restante */
+    );
+}
+
+.section-title {
+    color: whitesmoke; /* Cor do texto branco esfumaçado */
+    font-size: 3rem; /* Tamanho da fonte do título */
+    padding-bottom: 1%; /* Espaço abaixo do título */
+}
+
+.section-subtitle {
+    color: whitesmoke; /* Cor do texto branco esfumaçado */
+    font-size: 1.563rem; /* Tamanho da fonte do subtítulo */
+    margin-bottom: 3%; /* Espaço abaixo do subtítulo */
+}
+
+#step {
+    width: 100%; /* Largura total */
+    height: 10%; /* Altura de 10% */
+    display: flex; /* Layout flexível para organizar os passos */
+    justify-content: center; /* Centraliza horizontalmente os passos */
+    gap: 24px; /* Espaçamento entre os itens */
+    margin-top: 32px; /* Margem superior */
+}
+
+.steps {
+    display: flex; /* Layout flexível */
+    flex-direction: column; /* Organiza os itens em coluna */
+    justify-content: center; /* Centraliza verticalmente o conteúdo */
+    align-items: center; /* Centraliza horizontalmente o conteúdo */
+    border-radius: 20px; /* Bordas arredondadas */
+    width: 33%; /* Largura de 33% para cada caixa */
+    padding: 50px 10px 50px 40px; /* Espaçamento interno */
+    background-color: #fff; /* Fundo branco */
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
+    
+    /* Garantindo altura igual entre as caixas */
+    flex-grow: 1; /* Faz com que as caixas cresçam igualmente */
+    align-self: stretch; /* Faz com que a altura seja uniforme entre as caixas */
+    
+    /* Centralizando texto */
+    text-align: center; /* Alinha o texto ao centro */
+    
+    /* Removendo limites de altura */
+    height: auto; /* Altura ajustável automaticamente */
+    min-height: 300px; /* Altura mínima de 300px */
+}
+
+.steps p {
+    flex-grow: 1; /* Faz com que o parágrafo ocupe todo o espaço disponível */
+    display: flex; /* Layout flexível */
+    flex-direction: column; /* Organiza os textos em coluna */
+    justify-content: center; /* Centraliza verticalmente o texto */
+    align-items: center; /* Centraliza horizontalmente o texto */
+    text-align: center; /* Alinha o texto ao centro */
+    font-size: 1.2em; /* Tamanho padrão da fonte */
+}
+
+/* Classes para ajustar a formatação de diferentes partes de cada passo */
+.step-number, .step-title, .step-description {
+    text-align: center; /* Centraliza o texto */
+    width: 100%; /* Largura total */
+}
+
+/* Ajustando o tamanho do texto para diferentes partes */
+.step-number {
+    font-size: 40px; /* Tamanho da fonte para o número do passo */
+}
+
+.step-title {
+    padding: 20px; /* Espaçamento interno */
+    font-size: 30px; /* Tamanho da fonte para o título do passo */
+    padding-left: 2px; /* Pequeno espaçamento à esquerda */
+}
+
+.step-description {
+    padding: 20px; /* Espaçamento interno */
+    padding-left: 2px; /* Pequeno espaçamento à esquerda */
+    font-size: 20px; /* Tamanho da fonte para a descrição do passo */
+}
+
+/* Media query para dispositivos menores (até 768px de largura) */
+@media screen and (max-width: 768px) {
+    #step {
+        flex-wrap: wrap; /* Quebra os itens em mais linhas, se necessário */
+        justify-content: center; /* Centraliza os itens */
+    }
+
+    .steps {
+        width: 50%; /* Ajusta a largura das caixas para 50% da tela */
+    }
+}
+
+/* Media query para telas muito pequenas (até 290px de largura) */
+@media (max-width: 290px) {
+    .steps {
+        /* Ajustando o tamanho da caixa em telas pequenas */
+        width: 100%; /* Largura total da caixa */
+        padding: 30px 5px 30px 20px; /* Reduz o espaçamento interno */
+        min-height: 200px; /* Reduz a altura mínima */
+    }
+}

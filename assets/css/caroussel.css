@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color:  #5A77FF; /* Cor de fundo da página */
+}
+
+.container_caroussel {
+    display: flex;
+    justify-content: center; /* Alinha o conteúdo horizontalmente no centro da página */
+    align-items: center; /* Alinha o conteúdo verticalmente no centro da página */
+    height: 100vh; /* Define a altura do container igual à altura total da janela */
+    background-color: #f0f0f0; /* Cor de fundo opcional para o container */
+}
+
+.title_caroussel {
+    font-size: 2rem; /* Define o tamanho da fonte do título */
+    text-align: center; /* Centraliza o texto do título */
+    color: #333; /* Define a cor do título */
+    margin-top: 5vh; /* Adiciona margem superior */
+}
+
+.slider {
+    width: 90%; /* Define a largura do slider como 90% da tela */
+    height: 40vh; /* Define a altura do slider */
+    margin: 5vh auto; /* Centraliza o slider horizontalmente e adiciona margem superior e inferior */
+    position: relative; /* Necessário para posicionamento absoluto dos controles */
+    overflow: hidden; /* Esconde as partes das imagens que ultrapassam o slider */
+    border-radius: 15px; /* Arredonda os cantos do slider */
+    background: rgba(255, 255, 255, 0.766); /* Fundo branco semitransparente */
+}
+
+.slides {
+    display: flex; /* Torna os slides flexíveis e alinhados horizontalmente */
+    width: 300%; /* Define a largura dos slides para acomodar 3 slides (cada um com 100% de largura) */
+    height: 100%; /* Define a altura dos slides */
+    transition: transform 0.5s ease-in-out; /* Transição suave ao trocar de slide */
+    align-items: center; /* Centraliza verticalmente o conteúdo dos slides */
+    margin-top: -7vh; /* Ajusta a posição vertical dos slides */
+}
+
+.slide {
+    display: flex;
+    justify-content: space-between; /* Espaçamento uniforme entre os itens do slide */
+    width: 100%; /* Cada slide ocupa 100% da largura do slider */
+    align-items: center; /* Centraliza verticalmente o conteúdo dentro de cada slide */
+    margin: 5vw; /* Adiciona margem lateral para os itens dentro do slide */
+}
+
+.slide img {
+    width: auto; /* Mantém a proporção da imagem */
+    height: 10vh; /* Define a altura da imagem */
+    object-fit: cover; /* Ajusta o conteúdo da imagem para cobrir a área definida */
+    margin: 0 5px; /* Adiciona margem lateral entre as imagens */
+}
+
+input[type="radio"] {
+    display: none; /* Esconde os radio buttons usados para controlar o carrossel */
+}
+
+/* Controle dos slides com radio buttons */
+/* Define a posição dos slides com base no radio button selecionado */
+#slide1:checked ~ .slides {
+    transform: translateX(0); /* Move para o primeiro slide */
+}
+
+#slide2:checked ~ .slides {
+    transform: translateX(-33.33%); /* Move para o segundo slide */
+}
+
+#slide3:checked ~ .slides {
+    transform: translateX(-66.66%); /* Move para o terceiro slide */
+}
+
+/* Navegação */
+/* Define a navegação do carrossel (bolinhas ou botões de navegação) */
+.navigation {
+    position: absolute; /* Posição absoluta em relação ao slider */
+    bottom: 2vh; /* Posição a 2vh do fundo do slider */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta a posição horizontal */
+    display: flex; /* Exibe os itens de navegação em linha */
+    gap: 10vw; /* Espaçamento maior entre os botões de navegação */
+}
+
+.nav {
+    width: 15px; /* Define a largura das bolinhas de navegação */
+    height: 15px; /* Define a altura das bolinhas de navegação */
+    background: rgba(255, 255, 255, 0.925); /* Cor de fundo das bolinhas */
+    border-radius: 50%; /* Deixa as bolinhas redondas */
+    cursor: pointer; /* Altera o cursor para "pointer" ao passar sobre as bolinhas */
+    transition: background 0.3s; /* Transição suave ao passar o mouse */
+}
+
+.nav:hover {
+    background: rgba(255, 255, 255, 1); /* Altera a cor das bolinhas ao passar o mouse */
+}

@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
+
+/* Definindo variáveis de cores */
+:root {
+    --color-neutral-0: #0e0c0c;
+    --color-neutral-30: #a8a29e;
+    --color-neutral-40: #f5f5f5;
+}
+
+* {
+    font-family: 'Inter', sans-serif; /* Fonte global da página */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Inclui padding e bordas no tamanho total do elemento */
+    letter-spacing: 1px; /* Espaçamento entre letras */
+}
+
+footer {
+    width: 100%; /* O footer ocupa toda a largura da página */
+    background-color: rgb(25, 5, 64); /* Cor de fundo do rodapé */
+    padding: 2rem 5%; /* Espaçamento interno do rodapé */
+    box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.1); /* Sombra suave na parte superior */
+    position: relative; /* Posição relativa para manter o rodapé no final */
+    bottom: 0;
+}
+
+#footer-logo {
+    padding-left: 5%; /* Espaçamento à esquerda para o logo */
+    max-width: 100%; /* Garante que o logo não ultrapasse a largura total */
+}
+
+.footer-link {
+    text-decoration: none; /* Remove a sublinhado dos links */
+}
+
+#footer_content {
+    background-color: var(--color-neutral-10); /* Cor de fundo neutra */
+    display: grid; /* Layout de grid */
+    grid-template-columns: repeat(3, 1fr); /* Três colunas de largura igual */
+    gap: 2rem; /* Espaçamento entre os itens */
+    padding: 3rem; /* Espaçamento interno */
+}
+
+#footer_contacts h1 {
+    margin-bottom: 0.75rem; /* Espaçamento inferior no título */
+}
+
+#footer_social_media {
+    display: flex; /* Layout flexível para alinhar os ícones de redes sociais */
+    gap: 2rem; /* Espaçamento entre os ícones */
+    margin-top: 1.5rem; /* Espaçamento superior */
+}
+
+#footer_social_media .footer-link {
+    display: flex; /* Layout flexível para centralizar o ícone dentro do círculo */
+    align-items: center; /* Centraliza verticalmente o ícone */
+    justify-content: center; /* Centraliza horizontalmente o ícone */
+    height: 2.5rem; /* Altura fixa do botão */
+    width: 2.5rem; /* Largura fixa do botão */
+    color: var(--color-neutral-40); /* Cor do ícone */
+    border-radius: 50%; /* Forma circular */
+    transition: all 0.4s; /* Transição suave ao passar o mouse */
+}
+
+#footer_social_media .footer-link i {
+    font-size: 1.25rem; /* Tamanho do ícone */
+}
+
+#footer_social_media .footer-link:hover {
+    opacity: 0.8; /* Diminui a opacidade ao passar o mouse */
+}
+
+/* Cores de fundo personalizadas para as redes sociais */
+#instagram {
+    background: linear-gradient(#7f37c9, #ff2992, #ff9807); /* Gradiente para o Instagram */
+}
+
+#linkedin {
+    background-color: #4267b3; /* Cor do fundo do LinkedIn */
+}
+
+#whatsapp {
+    background-color: #25d366; /* Cor do fundo do WhatsApp */
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column; /* Organiza os itens da lista em coluna */
+    gap: 0.75rem; /* Espaçamento entre os itens */
+    list-style: none; /* Remove os marcadores da lista */
+    justify-content: center; /* Centraliza os itens */
+    color: white; /* Cor do texto */
+}
+
+.footer-list .footer-link {
+    color: var(--color-neutral-30); /* Cor inicial dos links */
+    transition: all 0.4s; /* Transição suave na mudança de cor */
+}
+
+.footer-list .footer-link:hover {
+    color: #7f37c9; /* Muda a cor do link ao passar o mouse */
+}
+
+#input_group {
+    display: flex; /* Layout flexível para agrupar o input e o botão */
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    background-color: var(--color-neutral-0); /* Cor de fundo do input */
+    border-radius: 4px; /* Bordas arredondadas */
+}
+
+#input_group input {
+    all: unset; /* Remove as propriedades padrões do input */
+    padding: 0.75rem; /* Espaçamento interno */
+    width: 100%; /* O input ocupa toda a largura */
+}
+
+#input_group button {
+    background-color: #7f37c9; /* Cor de fundo do botão */
+    border: none; /* Remove a borda padrão */
+    color: var(--color-neutral-40); /* Cor do texto do botão */
+    padding: 0px 1.25rem; /* Espaçamento interno no botão */
+    font-size: 1.125rem; /* Tamanho da fonte do botão */
+    height: 100%; /* O botão preenche a altura total do input */
+    border-radius: 0px 4px 4px 0px; /* Bordas arredondadas apenas à direita */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+    transition: all 0.4s; /* Transição suave ao passar o mouse */
+}
+
+#input_group button:hover {
+    opacity: 0.8; /* Diminui a opacidade ao passar o mouse */
+}
+
+#footer_copyright {
+    display: flex; /* Layout flexível para centralizar o conteúdo */
+    justify-content: center; /* Centraliza o texto horizontalmente */
+    background-color: var(--color-neutral-0); /* Cor de fundo do copyright */
+    font-size: 0.9rem; /* Tamanho da fonte do copyright */
+    padding: 1.5rem; /* Espaçamento interno */
+    font-weight: 100; /* Texto com peso leve */
+    color: white; /* Cor do texto */
+}
+
+/* Regras de mídia para ajustar o layout em telas menores */
+@media screen and (max-width: 768px) {
+    #footer_content {
+        grid-template-columns: repeat(2, 1fr); /* Duas colunas em telas menores */
+    }
+    
+    #footer-logo {
+        padding-left: 3%; /* Reduz o espaçamento à esquerda do logo */
+    }
+}
+
+@media screen and (max-width: 531px) {
+    #footer_content {
+        grid-template-columns: repeat(1, 1fr); /* Uma coluna em telas muito pequenas */
+        padding: 2rem; /* Reduz o padding */
+    }
+    
+    #footer-logo {
+        padding-left: 2%; /* Reduz ainda mais o padding do logo */
+    }
+}
+
+/* Regras de mídia para telas muito pequenas */
+@media screen and (max-width: 305px) {
+    .footer-list {
+        font-size: 0.75rem; /* Reduz o tamanho da fonte da lista */
+        padding: 0.5rem; /* Reduz o padding da lista */
+    }
+
+    .footer-list .footer-link {
+        font-size: 0.75rem; /* Reduz o tamanho da fonte dos links */
+    }
+}
+
+@media (max-width: 290px) {
+    #footer_social_media {
+        gap: 1rem; /* Reduz o espaçamento entre os ícones de redes sociais */
+        margin-top: 1rem; /* Reduz o espaçamento superior */
+        transform: scale(0.8); /* Diminui o tamanho dos ícones */
+    }
+}
+
+/* Ajustes específicos para o conteúdo principal em diferentes larguras */
+@media (max-width: 768px) {
+    .text-content h1 {
+        font-size: 20px; /* Reduz o tamanho da fonte do título em telas médias */
+    }
+
+    .text-content p {
+        font-size: 14px; /* Reduz o tamanho da fonte do parágrafo em telas médias */
+    }
+}
+
+@media (max-width: 500px) {
+    .text-content h1 {
+        font-size: 18px; /* Reduz o título em telas pequenas */
+    }
+
+    .text-content p {
+        font-size: 12px; /* Reduz o parágrafo em telas pequenas */
+    }
+}
+
+@media (max-width: 400px) {
+    .text-content h1 {
+        font-size: 16px; /* Reduz o título em telas muito pequenas */
+    }
+
+    .text-content p {
+        font-size: 10px; /* Reduz o parágrafo em telas muito pequenas */
+    }
+}

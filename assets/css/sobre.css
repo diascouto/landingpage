@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif; /* Define a fonte Poppins como padrão */
+    background-color: #5A77FF; /* Cor de fundo azul */
+}
+
+/* Estilos para o conteúdo sobre a empresa */
+.about-container {
+    text-align: center; /* Centraliza o texto */
+    margin: 20px auto; /* Margens automáticas para centralizar o contêiner */
+    margin-bottom: 100px; /* Margem inferior */
+    max-width: 900px; /* Largura máxima do contêiner */
+    color: whitesmoke; /* Cor do texto branco */
+}
+
+.about-container h1 {
+    font-size: 2.7em; /* Tamanho do título */
+    margin-bottom: 20px; /* Margem inferior */
+}
+
+.about-container p {
+    font-size: 1.2em; /* Tamanho da fonte dos parágrafos */
+    line-height: 1.3; /* Altura da linha */
+    margin-bottom: 40px; /* Margem inferior */
+    text-align: justify; /* Justifica o texto */
+    text-align-last: center; /* Centraliza a última linha do texto justificado */
+    max-width: 100%; /* Garante que o texto ocupe toda a largura do bloco */
+}
+
+/* Caixa arredondada e opaca ao redor do texto principal */
+.text-box {
+    background: rgba(255, 255, 255, 0.8); /* Fundo branco opaco */
+    border-radius: 15px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    max-width: 800px; /* Largura máxima */
+    margin: 0 auto; /* Centraliza a caixa */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidade */
+    text-align: justify; /* Justifica o texto */
+    text-align-last: center; /* Centraliza a última linha */
+}
+
+/* Seção do CEO */
+.ceo-section {
+    display: flex; /* Define layout flexbox */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    background: rgba(222, 238, 240, 0.8); /* Fundo opaco claro */
+    padding: 20px; /* Padding interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    max-width: 800px; /* Largura máxima */
+    margin: 0 auto; /* Centraliza a seção */
+    text-align: center; /* Centraliza o texto */
+    gap: 20px; /* Espaçamento entre imagem e texto */
+}
+
+/* Imagem circular na seção do CEO */
+.circle-image {
+    width: 200px; /* Largura da imagem circular */
+    height: 200px; /* Altura da imagem circular */
+    border-radius: 50%; /* Bordas totalmente arredondadas */
+    background-color: #fff; /* Fundo branco para a imagem */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    display: flex; /* Layout flexbox */
+    justify-content: center; /* Centraliza a imagem horizontalmente */
+    align-items: center; /* Centraliza a imagem verticalmente */
+}
+
+.circle-image img {
+    width: 180px; /* Largura da imagem interna */
+    height: 180px; /* Altura da imagem interna */
+    border-radius: 50%; /* Deixa a imagem em formato circular */
+}
+
+/* Ajusta altura do texto para combinar com a altura da imagem */
+.ceo-description {
+    display: flex; /* Define layout flexbox */
+    flex-direction: column; /* Organiza o texto em coluna */
+    justify-content: center; /* Centraliza o texto verticalmente */
+    max-width: 500px; /* Largura máxima do texto */
+    height: 200px; /* Altura definida para combinar com a imagem */
+    text-align: justify; /* Justifica o texto */
+    text-align-last: center; /* Centraliza a última linha */
+    color: black; /* Cor do texto */
+}
+
+.ceo-description h2 {
+    font-size: 1.5em; /* Tamanho da fonte do título */
+    margin-bottom: 10px; /* Margem inferior do título */
+}
+
+.ceo-description p {
+    font-size: 1em; /* Tamanho da fonte dos parágrafos */
+    margin-bottom: 10px; /* Margem inferior dos parágrafos */
+}
+
+.ceo-description p strong {
+    font-weight: bold; /* Define o texto dentro de <strong> como negrito */
+}
+
+/* Estilo para imagem completa na parte inferior */
+#img4 {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    bottom: 0;
+    width: 100%; /* Largura total da imagem */
+}
+
+#img4 img {
+    display: block; /* Exibe a imagem como bloco */
+    width: 100%; /* Largura total da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .ceo-section {
+        flex-direction: column; /* Altera a direção do layout para coluna em telas menores */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .circle-image {
+        margin-bottom: 20px; /* Adiciona margem inferior à imagem em telas menores */
+    }
+
+    .ceo-description {
+        margin-top: 0; /* Remove a margem superior */
+        height: auto; /* Permite que o texto ajuste a altura automaticamente */
+    }
+}
